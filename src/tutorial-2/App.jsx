@@ -1,16 +1,14 @@
 export default function App(){
   const value = {email:'',password:''}
   const getEmail = (e)=>{
-    value.email = e.target.value;
+    value.email = e.target.value.trim();
   } 
   const getPassword = (e)=>{
-    value.password = e.target.value;
+    value.password = e.target.value.trim();
   }
   const handleSubmit = (evt)=>{
     evt.preventDefault();
     if(value.email && value.password){
-    console.log(value);
-    console.log(evt.target);
     value.email ='';
     value.password ='';
     evt.target.reset();
