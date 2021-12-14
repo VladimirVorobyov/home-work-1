@@ -42,3 +42,7 @@ export const nounsArr = [
   "город",
   "дурак"
 ];
+
+export const  getRendom = (arr) => {
+  return Math.floor(Math.random()*arr.length);
+}
