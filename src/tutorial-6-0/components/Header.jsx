@@ -1,29 +1,29 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { NavLink, Link } from "react-router-dom";
+import { CostomeLink } from "../costome/costomeLink";
 
 export const Header = () => {
   return (
     <header>
       <h2>
-        <a href="/">React Blog</a>
+        <Link to="/">React Blogersd</Link>
       </h2>
-      <Nav variant="pills" defaultActiveKey="/">
-        <Nav.Item>
-          <Nav.Link eventKey="/home" to="/">
-            Главная
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="/home" to="/about">
-            Обо мне
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="/home" to="/profile">
+      <ul>
+        <li>
+          <NavLink to="/">Главная</NavLink>
+        </li>
+        <li>
+          <CostomeLink to="/about">Обо мне</CostomeLink>
+        </li>
+        <li>
+          <NavLink
+            to="/profile"
+            className={({ isActive }) => (isActive ? "asd" : "")}
+          >
             Профиль
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
+          </NavLink>
+        </li>
+      </ul>
     </header>
   );
 };
