@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { App } from "./tutorial-6-0/App";
+import { App } from "./authorization/App";
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
